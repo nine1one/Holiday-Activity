@@ -1,6 +1,6 @@
 # 🎄 Holiday Activity — Decorative Repository 🎆
 
-![Holiday banner](./assets/holiday-simple-banner.svg)
+![Holiday banner](./assets/banner.svg)
 
 A tiny, festive repository created by [Working Copy](https://workingcopy.app/?ct=holiday) to add cheerful activity to the GitHub contribution graph and profile activity overview.
 
