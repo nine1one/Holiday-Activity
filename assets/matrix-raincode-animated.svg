@@ -1,0 +1,31 @@
+<svg width="100%" height="100%" style="background:black; overflow:hidden;">
+  <defs>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+  </defs>
+  <text id="matrixText" x="0" y="0" fill="lightgreen" font-family="Arial" font-size="12" filter="url(#blur)">
+    nཌaཚyཌa࠴n࠴mཌo下n丒iཇッh不aཐz万aཎr丁iམk七aཪキ゚ཫྩベཌྷ⼺ཌ⼮ཀ⻎ཌ⺩⺔࠴⺎࠴
+  </text>
+  <script type="text/javascript">
+    const textElement = document.getElementById('matrixText');
+    const chars = "nཌaཚyཌa࠴n࠴mཌo下n丒iཇッh不aཐz万aཎr丁iམk七aཪキ゚ཫྩベཌྷ⼺ཌ⼮ཀ⻎ཌ⺩⺔࠴⺎࠴";
+    const columnWidth = 16;
+    const drops = Array.from({ length: Math.ceil(window.innerWidth / columnWidth) }, () => -Math.floor(Math.random() * 73));
+
+    function drawMatrix() {
+      drops.forEach((drop, i) => {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        const y = drop * columnWidth;
+        textElement.setAttribute('x', i * columnWidth);
+        textElement.setAttribute('y', y);
+        if (y > window.innerHeight || Math.random() > 0.98) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      });
+    }
+
+    setInterval(drawMatrix, 100);
+  </script>
+</svg>
